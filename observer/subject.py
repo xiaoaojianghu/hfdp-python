@@ -26,7 +26,7 @@ class WeatherData(Subject):
 		self._pressure = None
 
 	def registerObserver(self, observer):
-		self._observers.append(observer)
+		self._observers.append(observer) # register: add to list
 
 	def removeObserver(self, observer):
 		try:

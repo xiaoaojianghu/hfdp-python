@@ -1,11 +1,7 @@
-
-
-###############################################################################
-# Quack behaviors
-###############################################################################
 from abc import ABCMeta, abstractmethod
 
 
+# Quack behaviors
 class QuackBehavior:
     __metaclass__ = ABCMeta
 
@@ -34,11 +30,8 @@ class FakeQuack(QuackBehavior):
         print("Qwak")
 
 
-###############################################################################
 # Fly behaviors
-###############################################################################
-
-class FlyBehavior():
+class FlyBehavior:
     __metaclass__ = ABCMeta
 
     @abstractmethod

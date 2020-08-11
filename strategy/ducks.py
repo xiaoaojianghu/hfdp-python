@@ -1,18 +1,4 @@
-"""
-Duck simulator
-
-Author: m1ge7
-Date: 2014/03/22
-"""
-
-from abc import ABCMeta, abstractmethod
-
-
-###############################################################################
-# Ducks
-###############################################################################
 from strategy.behaviors import *
-
 
 class Duck:
     __metaclass__ = ABCMeta
@@ -24,7 +10,7 @@ class Duck:
         pass
 
     def fly(self):
-        self.fly_behavior.fly()
+        self.fly_behavior.fly() #加一层解耦, 委托到behavior上
 
     def quack(self):
         self.quack_behavior.quack()
@@ -87,7 +73,6 @@ class ModelDuck(Duck):
 
     def display(self):
         print("I'm a model duck")
-
 
 
 if __name__ == '__main__':

@@ -22,9 +22,9 @@ class CurrentConditionsDisplay(Observer, DisplayElement):
 	def __init__(self, weather_data):
 		self._temperature = None
 		self._humidity = None
-		self._weather_data = weather_data
+		self._weather_data = weather_data  # keep this reference, can unregister myself
 
-		weather_data.registerObserver(self) 
+		weather_data.registerObserver(self)  # here to register
 
 	def update(self, temperature, humidity, pressure):
 		self._temperature = temperature
